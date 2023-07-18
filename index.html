@@ -12,8 +12,10 @@
     <div class="music-container">
         <div class="music-info">
             <h4 id="title">Bobby_Darin</h4>
+            <div class="current-time">00:00</div><div class="total-duration">00:00</div>
             <div class="progress-container">
                 <div class="progress"></div>
+                <input type="range" min="0" max="100" value="0" class="seek-slider" onchange="">
             </div>
         </div>
         <audio src="Music/Beyond_the_Sea.m4a" id="audio"></audio>
@@ -30,16 +32,22 @@
             <button id="next" class="action-btn">
                 <i class="fas fa-forward"></i>
             </button>
+            <button id="loop" class="action-btn">
+                <i class="fas fa-arrows-rotate"></i>
+            </button>
             <button id="mute" class="action-btn">
                 <i class="fas fa-volume-mute"></i>
             </button>
             <div class="Volume">
                 <div class="slider">
-                    <input type="range" min="0" max="100" value="50" class="volume-slider" onchange="setVolume()">
-                    <progress min="0" max="100" value="50"> </progress>
+                    <input type="range" min="0" max="100" value="100" class="volume-slider" onchange="setVolume()">
+                    <progress min="0" max="100" value="100"> </progress>
                     <div class="sliderValue"></div>
                 </div>
             </div>
+        </div>
+        <div class="playlist">
+            
         </div>
     </div>
         <script src="script.js"></script>
